@@ -6,7 +6,7 @@ import {
   GET_PRODUCT_STYLES_SUCCESS
 } from "../constants/action-types";
 
-const API_URL = "http://3.134.102.30";
+const API_URL = "http://localhost:3000";
 
 export const getProductsList = () => (dispatch) => {
   return axios

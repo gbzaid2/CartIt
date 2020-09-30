@@ -46,7 +46,7 @@ class AddQuestion extends React.Component {
       name: this.state.name,
       email: this.state.email
     };
-    Axios.post(`http://3.134.102.30/qa/${this.props.productID}`, myQuestion)
+    Axios.post(`http://localhost:3000/qa/${this.props.productID}`, myQuestion)
       .then((data) => {
         this.props.loadQuestions();
       })

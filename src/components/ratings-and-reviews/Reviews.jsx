@@ -11,7 +11,7 @@ const Reviews = (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://3.134.102.30/reviews/${props.productId}/list?page=1&count=100`)
+      .get(`http://localhost:3000/reviews/${props.productId}/list?page=1&count=100`)
       .then((res) => {
         setReviews(res.data.results);
       })
@@ -34,7 +34,7 @@ const Reviews = (props) => {
   };
 
   const sendFilter = (event) => {
-    const reviewsAPI = `http://3.134.102.30/reviews`;
+    const reviewsAPI = `http://localhost:3000/reviews`;
     const sort = event.target.value;
     axios
       .get(`${reviewsAPI}/${props.productId}/list?page=1&count=100&sort=${sort}`)

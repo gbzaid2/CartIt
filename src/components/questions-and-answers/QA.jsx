@@ -26,7 +26,7 @@ class QA_ extends React.Component {
   }
 
   loadQuestions() {
-    Axios.get("http://3.134.102.30/qa/" + this.state.productID + "/?page=1&count=200")
+    Axios.get("http://localhost:3000/qa/" + this.state.productID + "/?page=1&count=200")
       .then((data) => {
         console.log("Got new questions:", this.state.productID);
         data.data.results.sort((a, b) => {

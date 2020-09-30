@@ -45,7 +45,7 @@ class AddAnswer extends React.Component {
       email: this.state.email
     };
 
-    Axios.post(`http://3.134.102.30/qa/${this.props.question_id}/answers`, myAnswer)
+    Axios.post(`http://localhost:3000/qa/${this.props.question_id}/answers`, myAnswer)
       .then(() => { this.props.loadQuestions()})
       .catch((err) => {
         console.log(err);

@@ -15,7 +15,7 @@ const RatingsAndReviewsContainer = (props) => {
   const [productId, setProductId] = useState(1);
 
   useEffect(() => {
-    axios.get(`http://3.134.102.30/reviews/${props.productId}/meta`).then((res) => {
+    axios.get(`http://localhost:3000/reviews/${props.productId}/meta`).then((res) => {
       setProductId(res.data.product_id);
       setFakeSoloReview(res.data);
     });

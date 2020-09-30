@@ -9,7 +9,7 @@ const QuestionUnit = (props) => {
   const answers = props.question.answers;
   const handleClick = function(id) {
     if (didVote) return;
-    Axios.put(`http://3.134.102.30/qa/question/${id}/helpful`).catch((err) => {
+    Axios.put(`http://localhost:3000/qa/question/${id}/helpful`).catch((err) => {
       console.log(err);
     });
     setDidVote(true);

@@ -2,7 +2,7 @@
 
 ### Current Host
 
-The API can currently be found at http://3.134.102.30/.
+The API can currently be found at http://localhost:3000/.
 
 ### The different data services for this api are
 

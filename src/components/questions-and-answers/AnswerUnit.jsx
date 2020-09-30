@@ -23,14 +23,14 @@ const AnswerUnit = (props) => {
   }
   const handleUpvote = function(id) {
     if (didVote) return;
-    Axios.put(`http://3.134.102.30/qa/answer/${id}/helpful`);
+    Axios.put(`http://localhost:3000/qa/answer/${id}/helpful`);
     setDidVote(true);
     setVotes(votes + 1);
   };
 
   const handleReport = function(e, id) {
     if (didReport) return;
-    Axios.put(`http://3.134.102.30/qa/answer/${id}/report`).catch((err) =>
+    Axios.put(`http://localhost:3000/qa/answer/${id}/report`).catch((err) =>
       console.log(err)
     );
     setDidReport(true);

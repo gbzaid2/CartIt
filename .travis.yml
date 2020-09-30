@@ -19,7 +19,7 @@ install:
 
 # Runs the React application for tests
 before_script:
-  - export REACT_APP_API_URL="http://3.134.102.30"
+  - export REACT_APP_API_URL="http://localhost:3000"
   - docker-compose up -d --build
 
 # Runs the tests

@@ -25,10 +25,10 @@ const OverviewContainer = (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://3.134.102.30/products/` + props.PRODUCT_ID)
+      .get(`http://localhost:3000/products/` + props.PRODUCT_ID)
       .then((productInfo) => {
         setCurrentProduct(productInfo.data);
-        return axios.get(`http://3.134.102.30/products/${props.PRODUCT_ID}/styles`);
+        return axios.get(`http://localhost:3000/products/${props.PRODUCT_ID}/styles`);
       })
       .then((productStyles) => {
         setAvailableStyles(productStyles.data.results);

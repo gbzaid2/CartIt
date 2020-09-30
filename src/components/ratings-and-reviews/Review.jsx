@@ -15,11 +15,11 @@ const Review = (props) => {
   const sendHelfulReview = () => {
     setHelpfulReview(helpfulReview + 1);
     setHelfulClicked(true);
-    axios.put(`http://3.134.102.30/reviews/helpful/${reviewId}`);
+    axios.put(`http://localhost:3000/reviews/helpful/${reviewId}`);
   };
 
   const sendReportedReview = () => {
-    axios.put(`http://3.134.102.30/reviews/report/${reviewId}`);
+    axios.put(`http://localhost:3000/reviews/report/${reviewId}`);
     setReported(true);
   };
 

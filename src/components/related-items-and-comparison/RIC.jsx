@@ -22,7 +22,7 @@ const RIC_ = (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://3.134.102.30/products/${props.PRODUCT_ID}/related`)
+      .get(`http://localhost:3000/products/${props.PRODUCT_ID}/related`)
       .then((data) => {
         setRelatedItemsArr(data.data);
       })
@@ -35,16 +35,16 @@ const RIC_ = (props) => {
     let maxIndex = Math.max(...relatedItemsArr);
     let axiosReqArr = [];
     axiosReqArr.push(
-      axios.get(`http://3.134.102.30/products/list?page=1&count=` + maxIndex)
+      axios.get(`http://localhost:3000/products/list?page=1&count=` + maxIndex)
     );
     for (let num of relatedItemsArr) {
-      axiosReqArr.push(axios.get(`http://3.134.102.30/products/${num}/styles`));
+      axiosReqArr.push(axios.get(`http://localhost:3000/products/${num}/styles`));
     }
     for (let num of relatedItemsArr) {
-      axiosReqArr.push(axios.get(`http://3.134.102.30/reviews/${num}/meta`));
+      axiosReqArr.push(axios.get(`http://localhost:3000/reviews/${num}/meta`));
     }
     for (let num of relatedItemsArr) {
-      axiosReqArr.push(axios.get(`http://3.134.102.30/products/` + num));
+      axiosReqArr.push(axios.get(`http://localhost:3000/products/` + num));
     }
     axios
       .all(axiosReqArr)

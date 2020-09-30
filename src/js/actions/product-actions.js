@@ -3,7 +3,7 @@ import axios from "axios";
 export const getProducts = () => (dispatch) => {
   dispatch(getProductsBegin());
   return axios
-    .get("http://3.134.102.30")
+    .get("http://localhost:3000")
     .then((res) => {
       let products = res.data;
       dispatch(getProductsSuccess(products));
