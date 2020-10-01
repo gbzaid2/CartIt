@@ -1,4 +1,4 @@
-# CartIt
+# Cartify
 ### E-commerce apparel website built with React & Redux
 
 
